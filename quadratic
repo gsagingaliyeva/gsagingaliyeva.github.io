@@ -1,0 +1,9 @@
+def solve_quadratic(a,b,c):
+    d = (b**2-4*a*c)
+    d1 = d**0.5
+    if d<0: 
+        print ("None")
+    else: 
+        x1=(-b+d)/(2*a)
+        x2=(-b-d)/(2*a)
+        print (x1, x2)
