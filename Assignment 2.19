@@ -1,0 +1,38 @@
+import math
+def to_hex_16(a): 
+    x = (a % 16)
+    if (a < 10):
+        return math.floor(a)
+    elif (a == 10):
+        return "A"
+    elif (a == 11):
+        return "B"
+    elif (a == 12):
+        return "C"
+    elif (a == 13):
+        return "D"
+    elif (a == 14):
+        return "E"
+    elif (a == 15):
+        return "F"
+
+def to_hex(a):
+    if (a<=15):
+        first=a%16
+        first_car=to_hex_16(first)
+        return "0"+ first_car
+    else: 
+        first=a%16
+        first_car = to_hex_16(first)
+        print (first_car)
+        b=(a-first)/16
+        second=b
+        second_car=to_hex_16(second)
+        print (second_car)
+        output = str(second_car) + str(first_car)
+        return output
+    
+def to_hex_new(a,b,c):
+    output = str (to_hex(a))+str (to_hex(b))+str (to_hex(c))
+    print ("#" + output)
+
