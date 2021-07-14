@@ -20,8 +20,12 @@ def start():
         ('southamerica', "South America")
 
     ]
+    
+    picture_url = "Earth.jpg" 
+    
+   
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('start.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 
 
@@ -33,12 +37,15 @@ def africa():
     At about 30.3 million km² including adjacent islands, it covers 6% of Earth's total surface area and 20% of its land area. 
     With ~1.3 billion people, it accounts for about 16% of the world's human population."""
 
+    picture_url = "Africa.jpg" 
+
     choices = [
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
     ]
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    
+    return render_template('africa.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 @app.route("/antarctica")
 def antarctica():
@@ -51,8 +58,9 @@ def antarctica():
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
         ]
+    picture_url = "Antarctica.jpg"
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('antarctica.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 
 
@@ -67,8 +75,9 @@ def asia():
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
     ]
+    picture_url = "Asia.jpg"
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('asia.html', title=title, text=text, choices=choices, picture_url=picture_url)  
 
 @app.route("/australia")
 def australia():
@@ -82,8 +91,9 @@ def australia():
         ('next',"Depart Earth. Explore next planet")
     ]
     
+    picture_url = "Australia.jpg"
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('australia.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 @app.route("/europe")
 def europe():
@@ -95,9 +105,9 @@ def europe():
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
 ]
-    
+    picture_url = "Europe.jpg"
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('start.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 @app.route("/northamerica")
 def northamerica():
@@ -109,8 +119,9 @@ def northamerica():
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
     ]
+    picture_url = "Northamerica.jpg"
 
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    return render_template('northamerica.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 @app.route("/southamerica")
 def southamerica():
@@ -122,17 +133,19 @@ def southamerica():
         ('start',"Go to next continent"),
         ('next',"Depart Earth. Explore next planet")
     ]
-
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    picture_url = "Southamerica.jpg"
+    
+    return render_template('southamerica.html', title=title, text=text, choices=choices, picture_url=picture_url)
 
 @app.route("/nextplanet")
 def next():
-    title = "Next planet in Solar system is Mars!"
+    title = "Next planet in the Solar system is Mars!"
    
     text = """Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, 
-    being larger than only Mercury. Our journey will take 5 days."""
+    being larger than only Mercury. Our journey will take 6 months."""
 
     choices = [
         ]
-
-    return render_template('adventure.html', title=title, text=text, choices=choices)
+    picture_url = "Mars.jpg"
+    
+    return render_template('mars.html', title=title, text=text, choices=choices, picture_url=picture_url)
