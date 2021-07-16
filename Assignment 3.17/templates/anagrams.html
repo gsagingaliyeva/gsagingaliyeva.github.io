@@ -1,0 +1,11 @@
+
+{% block container %}
+
+    <h1>The anagrams are:</h1>
+    <ul>
+        {% for word in list %}
+        <li>{{word}}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
